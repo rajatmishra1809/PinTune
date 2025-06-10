@@ -6,6 +6,10 @@ import re
 app = Flask(__name__)
 ytmusic = YTMusic()
 
+@app.route("/")
+def home():
+    return "Hello, Railway!"
+
 @app.context_processor
 def inject_now():
     return {'now': datetime.utcnow()}
