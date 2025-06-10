@@ -1,0 +1,175 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0c3fc 50%, #8ec5fc 100%);
+    min-height: 100vh;
+    color: #2d3748;
+    background-image:
+      linear-gradient(135deg, #f8fafc 0%, #e0c3fc 50%, #8ec5fc 100%),
+      url('https://www.transparenttextures.com/patterns/diamond-upholstery.png');
+    background-blend-mode: lighten;
+}
+
+.max-w-4xl, .max-w-md {
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 2rem;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.13);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.text-transparent.bg-clip-text.bg-gradient-to-r {
+    background-image: linear-gradient(90deg, #a18cd1 0%, #fbc2eb 100%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.profile-nav-button, .back-nav-button, .surprise-me-button, .get-tunes-button, .register-button {
+    border-radius: 9999px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    box-shadow: 0 4px 14px 0 rgba(160, 120, 255, 0.12);
+    transition: all 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.profile-nav-button, .back-nav-button {
+    background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.surprise-me-button {
+    background: linear-gradient(90deg, #f7971e 0%, #ffd200 100%);
+    color: #5c4037;
+}
+
+.get-tunes-button, .register-button {
+    background: linear-gradient(90deg, #a1c4fd 0%, #c2e9fb 100%);
+    color: #3b3b3b;
+}
+
+.profile-nav-button:hover, .back-nav-button:hover, .surprise-me-button:hover, .get-tunes-button:hover, .register-button:hover {
+    filter: brightness(1.08) saturate(1.2);
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 8px 24px 0 rgba(160, 120, 255, 0.18);
+}
+
+/* Song card styling */
+.song-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 1.25rem;
+    box-shadow: 0 4px 24px 0 rgba(160, 120, 255, 0.08);
+    border: 1px solid rgba(160, 120, 255, 0.05);
+    transition: box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    min-width: 0;
+    min-height: 320px;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.song-card:hover {
+    box-shadow: 0 8px 32px 0 rgba(160, 120, 255, 0.18);
+}
+
+.song-album-art {
+    width: 96px;
+    height: 96px;
+    border-radius: 0.75rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    background: #e0e7ed;
+    box-shadow: 0 2px 8px rgba(160, 120, 255, 0.07);
+}
+
+.song-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #2d3748;
+    text-align: center;
+    margin-bottom: 0.25rem;
+    word-break: break-word;
+}
+
+.song-artist {
+    font-size: 1rem;
+    color: #7b8794;
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+.song-card audio {
+    margin: 0.5rem 0 0.5rem 0;
+    width: 100%;
+}
+
+.spotify-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    background: linear-gradient(90deg, #1db954 0%, #1ed760 100%);
+    color: #fff !important;
+    font-weight: 600;
+    padding: 0.5rem 1.2rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(30, 185, 84, 0.12);
+    transition: background 0.2s, box-shadow 0.2s;
+    font-size: 1rem;
+}
+
+.spotify-link:hover {
+    background: linear-gradient(90deg, #1ed760 0%, #1db954 100%);
+    box-shadow: 0 4px 16px rgba(30, 185, 84, 0.18);
+}
+
+.aesthetic-input, .profile-input {
+    background: rgba(240, 240, 255, 0.8);
+    color: #2d3748;
+    border: 1.5px solid #a18cd1;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px 0 rgba(160, 120, 255, 0.06);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-size: 1.1rem;
+}
+.aesthetic-input:focus, .profile-input:focus {
+    border-color: #a18cd1;
+    box-shadow: 0 4px 16px 0 rgba(160, 120, 255, 0.13);
+}
+.aesthetic-input::placeholder, .profile-input::placeholder {
+    color: #a18cd1;
+    opacity: 0.85;
+}
+
+#registration-message {
+    text-align: center;
+}
+
+#music-recommendations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    align-items: stretch;
+}
+
+#music-recommendations p {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #6b7280;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    grid-column: 1/-1;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-6px);}
+}
+.surprise-me-button, .get-tunes-button {
+    animation: float 3s ease-in-out infinite;
+}
